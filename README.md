@@ -47,7 +47,8 @@ Hasil: Serangan berhasil membuka sesi command shell. Verifikasi menggunakan peri
 
 <img width="747" height="253" alt="image" src="https://github.com/user-attachments/assets/0fcff6be-86f6-420e-a9c3-7a6d04826055" />
 
-**## 🛡️ Phase 2: Blue Team Operations (Defensive)**
+
+## 🛡️ Phase 2: Blue Team Operations (Defensive)
 1. Threat Detection (Forensik Jaringan)
 Segera setelah serangan terindikasi, dilakukan analisis koneksi jaringan pada mesin target menggunakan netstat.
 
