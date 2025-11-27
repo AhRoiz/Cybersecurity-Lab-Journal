@@ -28,3 +28,5 @@ Langkah awal dilakukan dengan pemindaian port menggunakan **Nmap** untuk mengide
 
 ```bash
 nmap -sV 192.168.56.101
+<img width="757" height="418" alt="image" src="https://github.com/user-attachments/assets/6689b1d8-251b-43fc-b60f-996a6eb310a5" />
+
