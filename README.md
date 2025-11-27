@@ -44,4 +44,38 @@ msf6 > set RHOSTS 192.168.56.101
 msf6 > exploit
 ```
 Hasil: Serangan berhasil membuka sesi command shell. Verifikasi menggunakan perintah whoami menunjukkan akses sebagai root (Administrator).
+
 <img width="747" height="253" alt="image" src="https://github.com/user-attachments/assets/0fcff6be-86f6-420e-a9c3-7a6d04826055" />
+
+🛡️ Phase 2: Blue Team Operations (Defensive)
+1. Threat Detection (Forensik Jaringan)
+Segera setelah serangan terindikasi, dilakukan analisis koneksi jaringan pada mesin target menggunakan netstat.
+
+```Bash
+sudo netstat -antp
+Analisis Anomali: Ditemukan koneksi mencurigakan dengan status ESTABLISHED yang tidak wajar:
+```
+Port Lokal: 6200 (Bukan port standar FTP 21).
+
+Process Name: sh (Shell/Terminal). Ini mengindikasikan bahwa layanan FTP telah dimanipulasi untuk membuka akses terminal ke luar.
+
+2. Incident Response (Containment & Eradication)
+Langkah mitigasi diambil dengan mematikan paksa (Force Kill) proses berbahaya tersebut berdasarkan PID (Process ID) yang ditemukan (PID: 4836).
+
+```Bash
+sudo kill -9 4836
+Verifikasi: Setelah eksekusi perintah kill, koneksi pada terminal penyerang (Kali Linux) terputus seketika (Broken pipe), menandakan akses pintu belakang telah berhasil ditutup.
+```
+<img width="718" height="386" alt="image" src="https://github.com/user-attachments/assets/4d9d361c-ff93-47c2-a78c-7ec63c72ac30" />
+
+
+💡 Lessons Learned & Remediation
+Mengapa ini terjadi?
+Layanan vsftpd 2.3.4 mengandung kode berbahaya (backdoor) yang disusupkan oleh hacker ke dalam source code asli pada tahun 2011. Siapapun yang login dengan username mengandung karakter :) akan memicu terbukanya port 6200.
+
+Rekomendasi Perbaikan (Remediation)
+Patch Management: Segera perbarui vsftpd ke versi stabil terbaru.
+
+Firewalling: Memblokir semua koneksi masuk (Ingress) ke port yang tidak dikenal (seperti 6200).
+
+Monitoring: Mengatur alert IDS/IPS untuk mendeteksi lalu lintas yang menuju ke port tinggi non-standar dari IP publik.
