@@ -84,7 +84,8 @@ Monitoring: Mengatur alert IDS/IPS untuk mendeteksi lalu lintas yang menuju ke p
 **⚠️ Disclaimer: Proyek ini dilakukan di lingkungan laboratorium terkontrol untuk tujuan pendidikan (Ethical Hacking). Jangan pernah melakukan scanning atau eksploitasi pada target tanpa izin tertulis.**
 
 Summary
+| Peran | Tindakan |
 | :--- | :--- |
-IT Setup | Membangun Lab VirtualBox (Kali & Metasploitable).
-Red Team | Scanning (Nmap) -> Menemukan Celah -> Exploiting (Metasploit) -> Dapat akses Root.
-Blue Team | Monitoring (Netstat) -> Mendeteksi koneksi mencurigakan di Port 6200.
+| IT Setup | Membangun Lab VirtualBox (Kali & Metasploitable). |
+| Red Team | Scanning (Nmap) -> Menemukan Celah -> Exploiting (Metasploit) -> Dapat akses Root. |
+| Blue Team | Monitoring (Netstat) -> Mendeteksi koneksi mencurigakan di Port 6200. |
