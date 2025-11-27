@@ -26,9 +26,11 @@ Semua aktivitas dilakukan dalam jaringan isolasi virtual (Host-only Network) unt
 ### 1. Reconnaissance (Network Scanning)
 Langkah awal dilakukan dengan pemindaian port menggunakan **Nmap** untuk mengidentifikasi layanan yang berjalan dan versinya.
 
+<img width="757" height="418" alt="image" src="https://github.com/user-attachments/assets/9076f9ef-8457-4201-8b5e-118bcfda7be2" />
+
+
 ```bash
 nmap -sV 192.168.56.101
 
-<img width="757" height="419" alt="Screenshot 2025-11-27 131146" src="https://github.com/user-attachments/assets/6e01daf1-e9c0-47da-9fbf-45b2394390a0" />
 
 
