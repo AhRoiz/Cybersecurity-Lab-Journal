@@ -1,8 +1,6 @@
 # 🛡️ Purple Team Lab: Exploitation & Detection of vsftpd 2.3.4 Backdoor
 
-![Badge Kali](<img width="197" height="255" alt="download" src="https://github.com/user-attachments/assets/da49090a-0d07-47c5-895f-bcf88bc16392" />
-) ![Badge Metasploit](<img width="306" height="164" alt="download" src="https://github.com/user-attachments/assets/6db42308-41bd-4025-923b-d2823143f488" />
-) ![Badge Blue Team](https://img.shields.io/badge/Blue%20Team-Incident%20Response-green)
+![Badge Kali](https://img.shields.io/badge/Red%20Team-Kali%20Linux-red) ![Badge Metasploit](https://img.shields.io/badge/Framework-Metasploit-blue) ![Badge Blue Team](https://img.shields.io/badge/Blue%20Team-Incident%20Response-green)
 
 ## 📋 Executive Summary
 Project ini adalah simulasi laboratorium keamanan siber dengan pendekatan **Purple Team** (gabungan Red Team & Blue Team). Tujuan utamanya adalah mengeksploitasi kerentanan kritis pada layanan FTP legacy dan mempraktikkan langkah-langkah *Incident Response* untuk mendeteksi serta menetralkan serangan tersebut secara *real-time*.
