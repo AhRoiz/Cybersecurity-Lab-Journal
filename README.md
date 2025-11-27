@@ -82,3 +82,8 @@ Firewalling: Memblokir semua koneksi masuk (Ingress) ke port yang tidak dikenal 
 Monitoring: Mengatur alert IDS/IPS untuk mendeteksi lalu lintas yang menuju ke port tinggi non-standar dari IP publik.
 
 **⚠️ Disclaimer: Proyek ini dilakukan di lingkungan laboratorium terkontrol untuk tujuan pendidikan (Ethical Hacking). Jangan pernah melakukan scanning atau eksploitasi pada target tanpa izin tertulis.**
+
+Summary
+IT SetupMembangun Lab VirtualBox (Kali & Metasploitable).
+Red TeamScanning (Nmap) -> Menemukan Celah -> Exploiting (Metasploit) -> Dapat akses Root.
+Blue TeamMonitoring (Netstat) -> Mendeteksi koneksi mencurigakan di Port 6200.
