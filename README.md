@@ -76,7 +76,9 @@ Layanan vsftpd 2.3.4 mengandung kode berbahaya (backdoor) yang disusupkan oleh h
 
 Rekomendasi Perbaikan (Remediation)
 Patch Management: Segera perbarui vsftpd ke versi stabil terbaru.
+
 Firewalling: Memblokir semua koneksi masuk (Ingress) ke port yang tidak dikenal (seperti 6200).
+
 Monitoring: Mengatur alert IDS/IPS untuk mendeteksi lalu lintas yang menuju ke port tinggi non-standar dari IP publik.
 
 **Disclaimer: Proyek ini dilakukan di lingkungan laboratorium terkontrol untuk tujuan pendidikan (Ethical Hacking). Jangan pernah melakukan scanning atau eksploitasi pada target tanpa izin tertulis.**
