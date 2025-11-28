@@ -35,7 +35,8 @@ nmap -sV 192.168.56.101
 
 Temuan: Ditemukan Port 21 terbuka menjalankan layanan vsftpd 2.3.4. Berdasarkan database kerentanan umum, versi ini memiliki celah Backdoor Command Execution (CVE-2011-2523).
 
-## ⚔️ 2. Exploitation (Getting Root)
+#### ⚔️ 2. Exploitation (Getting Root)
+
 Menggunakan Metasploit Framework, modul exploit exploit/unix/ftp/vsftpd_234_backdoor dimuat untuk memicu backdoor yang tertanam pada layanan tersebut.
 
 ```bash
